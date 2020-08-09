@@ -3,9 +3,6 @@
 ; ; 猜测     商           平均值
 ; ; 1       2/1 = 1       (2 + 1) / 2 = 1.5
 ; ; 1.5     2/1.5 = 1.3333 (1.5 + 1.3333) / 2 = 1.4142
-(define (new_if predicate then_clause else_clause)
-    (cond (predicate then_clause)
-          (else else_clause)))
 
 
 (define (square x)
@@ -31,7 +28,7 @@
 
 
 (define (sqrt_iter guess x)
-    (new_if (good_enough guess x)
+    (if (good_enough guess x)
         guess
         (sqrt_iter (improve guess x )
         x)))

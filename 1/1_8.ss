@@ -8,7 +8,7 @@
         x))
 
 (define (good_enough guess x )
-    (< (abs (- (cubic guess) x )) 0))
+    (< (abs (- (cubic guess) x )) 0.001))
 
 
 (define (average x y)

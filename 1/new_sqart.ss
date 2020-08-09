@@ -1,3 +1,5 @@
+
+;局部定义过程
 (define (sqrt x)
     (define (square x)
     (* x x))
