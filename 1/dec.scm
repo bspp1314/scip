@@ -1,5 +1,3 @@
-(define (des a)
+(define (dec a)
     (- a 1))
 
-
-(des 10)

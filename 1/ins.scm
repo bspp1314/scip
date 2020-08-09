@@ -1,4 +1,4 @@
-(define (ins a)
+(define (inc a)
     (+ a 1))
 
-(ins 10)
+(inc 10)
