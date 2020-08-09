@@ -8,4 +8,4 @@
 
 
 (a_plus_abs_b 4 6)
-(a_plus_abs_b 2 (- 2))
+(a_plus_abs_b 4 (- 6))
