@@ -1,6 +1,19 @@
 (define (square x)
     (* x x))
+; (fast_expt_iter)
+; |(fast_expt_iter 2 1 10)
+; |(fast_expt_iter 4 1 5)
+; |(fast_expt_iter 4 4 4)
+; |(fast_expt_iter 16 4 2)
+; |(fast_expt_iter 256 4 1)
+; |(fast_expt_iter 256 1024 0)
+; |1024
+; 1024
 
+; _表示次方
+; B_n
+; B_n = B * B_(n-1)  ; B是奇数
+; B_n = (B_2)_(n/2)  ; B是偶数
 (define (fast_expt_iter b produce n)
     (if (= n 0)
         produce
