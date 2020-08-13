@@ -43,7 +43,7 @@
            (sum term 0.0 next n))))    
 
 
-(simpson cube 0 1 100)
+(simpson cube 0 1 1000)
 
 
 

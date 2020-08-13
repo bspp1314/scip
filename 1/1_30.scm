@@ -1,22 +1,16 @@
 ;迭代的sum
 
 (define (sum term a next b)
-        (define (sum_iter a b sum)
+        (define (sum_iter a b result)
             (if (> a b)
-                sum
-                (sum_iter (next a) b (+ (term a) sum) )))
+                result
+                (sum_iter (next a) b (+ (term a) result))))
     (sum_iter a b 0))
 
 
 
 (define (odd x)
      (= (remainder n 2) 1))
-
-(define (sum term a next b)
-    (if (> a b)
-        0
-        (+ (term a)
-           (sum term (next a) next b))))
 
 (define (cube x)
     (* x x x))
@@ -53,6 +47,4 @@
            (sum term 0.0 next n))))    
 
 
-(simpson cube 0 1 100)
-
-
+(simpson cube 0 1 1000)
