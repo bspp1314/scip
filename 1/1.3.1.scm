@@ -46,7 +46,7 @@
         (+ b 4))
     (define (pi_term a)
        (/ 1.0 (* a (+ a 2))))
-    (sum pi_term a next b)    )
+    (sum pi_term a pi_next b) )
 
 
 (cube 10)
