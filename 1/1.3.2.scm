@@ -27,3 +27,42 @@
     ))
 
 (pi2_sum 1 10)
+
+(define (square x)
+    (* x x))
+
+
+;Lambda 的另一个应用是创建局部变量。在一个过程里，处理使用那些已经约束为过程参数的变量外，我们常常还需要一些局部变量.
+
+(define (f  x y)
+    (define (f_helper a b)
+        (+ (square a)
+           (* y b)
+           (* a b)
+        ))
+    (f_helper (+ 1 (* x y)) (- 1 y) )
+)
+
+(define (f2 x y)
+    ((lambda (a b) 
+    (+ (square a)
+           (* y b)
+           (* a b)))
+    (+ 1 (* x y ))
+    (- 1 y)
+ ))
+
+
+(define (f3 x y)
+    (let ((a (+ 1 (* x y )))
+          (b (- 1 y))
+         )
+        (+ (* x (square a))
+            (* y b)
+            (* a b)        
+        )))
+
+
+(f 1 2)
+(f2 1 2)
+(f3 1 2)
