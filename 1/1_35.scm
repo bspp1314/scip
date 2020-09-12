@@ -1,6 +1,6 @@
 
 
-(define (close_enough x y) (< (abs (- x y)) 1))
+(define (close_enough x y) (< (abs (- x y)) 0.001))
 
 (define (fix_point f first_guess)
     (define (try guess)
@@ -13,7 +13,7 @@
     (try first_guess))
 
 (define golden_ratio
-    (fix_point (lambda (x) 
+    (fix_point (lambda (x) π
                      (+ 1 (/ 1 x)))
                  1.0))
 
